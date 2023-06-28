@@ -1,0 +1,27 @@
+
+<div class="col-lg-12">
+<div class="card rounded-0 mt-5 mb-4">
+  <div class=card-body>
+    <h1 class="align-centre">Show detail...</h1>
+  <div class="row">
+  <div class="col-lg-6">
+    <h3 class="text-centre">Personal Information</h3>
+    <p class="lead"><strong>first Name:</strong><%= @employee.first_name %></p>
+     <p class="lead"><strong>Middle Name:</strong><%= @employee.middle_name %></p>
+      <p class="lead"><strong>Last Name:</strong><%= @employee.last_name %></p>
+       <p class="lead"><strong>email:</strong><%= @employee.personal_email %></p>
+  </div>
+  <div class="col-lg-6">
+    <h3 class="text-centre">Pincode</h3><%= @employee.pincode %></p>
+    <p class="lead"><strong>City:</strong><%= @employee.city %></p>
+     <p class="lead"><strong>Country:</strong><%= @employee.country %></p>
+      <p class="lead"><strong>Address_1:</strong><%= @employee.addres_line_1 %></p>
+       <p class="lead"><strong>Address_2:</strong><%= @employee.adress_line_2 %></p>
+  </div>
+</div>
+<%= link_to 'back to employees',employees_path,class:'btn btn-outline-primary btn-lg'%>
+<%#= link_to 'eidit employee',edit_employees_path(@employee),class:'btn btn-outline-primary btn-lg'%>
+
+</div> 
+</div>                
+</div>

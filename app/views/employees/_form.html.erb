@@ -1,0 +1,90 @@
+<%= form_with model: employee do |form| %>
+  <div class="row">
+    <% if @employee.errors.any? %>
+    <div class="col-lg-12">
+      <p class="lead">!please fix the errors dude...</p>
+      <% @employee.errors.full_messages.each do |message| %>
+           <p class="text-danger"><%= message %></p> 
+           <% end %>
+           </div>
+           <% end %> 
+       <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :first_name,class:'mb-2' %>
+        <%= form.text_field :first_name,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+  
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :middle_name,class:'mb-2' %>
+        <%= form.text_field :middle_name,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+  
+  
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :last_name,class:'mb-2' %>
+        <%= form.text_field :last_name,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :personal_email,class:'mb-2' %>
+        <%= form.text_field :personal_email,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :city,class:'mb-2' %>
+        <%= form.text_field :city,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :state,class:'mb-2' %>
+        <%= form.text_field :state,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :country,class:'mb-2' %>
+        <%= form.text_field :country,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :pincode,class:'mb-2' %>
+        <%= form.text_field :pincode,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :addres_line_1,class:'mb-2' %>
+        <%= form.text_field :addres_line_1,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="form-group">
+        <%= form.label :adress_line_2,class:'mb-2' %>
+        <%= form.text_field :adress_line_2,class:'form-control form-control-lg round-0'%>
+      </div>
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="col-lg-12 mt-4">
+      <%= form.submit class: 'btn btn-primary btn-lg rounded-0'%>
+      <%= link_to "back to employeee",employees_path,class:"btn btn-outline-primary btn-lg rounded-0" %>
+    </div>
+  </div>
+
+<% end %>
