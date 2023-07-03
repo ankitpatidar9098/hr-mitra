@@ -35,7 +35,7 @@ class DocumentsController < ApplicationController
     end  
 private  
   def document_params
-     params.require(:document).permit(:name, :doc_type,:employee_id)
+     params.require(:document).permit(:name, :doc_type, :employee_id, :image)
   end
 
 end

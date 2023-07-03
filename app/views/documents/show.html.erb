@@ -1,2 +1,18 @@
-<h1>Documents#show</h1>
-<p>Find me in app/views/documents/show.html.erb</p>
+<div class="col-lg-12">
+<div class="card rounded-0 mt-5 mb-5">
+<div class="card-body">
+<h2 class="text-centre">Doc Details</h2>
+
+<div class="row mt-5">
+<div class="col-lg-6">
+     <p class ='img-fluid'><strong >attachecd:</strong><%= image_tag @document.image %></p>
+     <p class="lead"><strong>name:</strong><%= @document.name %> </p>
+      <p class="lead"><strong>Type:</strong><%= @document.doc_type %> </p>
+      <p class="lead"><strong>Employee:</strong><%= @document.employee.first_name %> </p>
+
+</div>
+</div>
+<% link_to 'back to document',documents_path,class:'btn btn-outline-primary btn-lg rounded-0'%>
+</div>
+</div> 
+</div>
