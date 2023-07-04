@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
  # get 'documents/index'
   #get 'documents/new'
  # get 'documents/create'
